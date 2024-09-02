@@ -22,6 +22,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
 app.use("/auth", authRoutes);
 
 // Connect to MongoDB and start the server
